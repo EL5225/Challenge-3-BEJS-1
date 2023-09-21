@@ -39,7 +39,7 @@ SELECT * FROM akun;
 SELECT * FROM transaksi;
 
 
--- Realsi antar entitas menggunakan JOIN
+-- Relasi antar entitas menggunakan JOIN
 SELECT n.id AS id_nasabah, n.nama, count(a.id) AS jumlah_akun
 FROM nasabah n 
 LEFT JOIN akun a ON n.id = a.nasabah_id
@@ -59,11 +59,11 @@ INSERT INTO nasabah (nama, domisili)
 VALUES ('Kevin', 'Sumedang'), ('Rina', 'Aceh');
 
 INSERT INTO akun (nama, saldo, nasabah_id) 
-VALUES ('Kevin Utama', 5000000, 4);
+VALUES ('Kevin Utama', 5000000, 4), ('Kevin Cadangan', 20000000, 4);
 
 UPDATE akun SET saldo = saldo + 100000 WHERE id > 2;
 
-DELETE FROM akun WHERE id = 4;
+DELETE FROM akun WHERE id = > 4;
 
 
 
